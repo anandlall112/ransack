@@ -200,6 +200,7 @@ module Ransack
               nil
             end
           when Arel::Nodes::And
+            byebug
             extract_correlated_key(join_root.left) || extract_correlated_key(join_root.right)
             # To support nested children
             if join_root.children.any?
