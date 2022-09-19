@@ -161,6 +161,7 @@ module Ransack
         # because it is correlated to the primary key on the outer query.
         #
         def build_correlated_subquery(association)
+          byebug
           join_constraints = extract_joins(association)
           join_root = join_constraints.shift
           correlated_key = extract_correlated_key(join_root)
